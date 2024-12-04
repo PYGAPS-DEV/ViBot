@@ -30,4 +30,8 @@ async def loveyoutoo(ctx):
 async def mat(ctx):
     await ctx.send("yo sorry mat but we gotta share her or yk i can pay you some money and i take her all for myself:fire::heart:")
 
-bot.run("MTMxMzk2MDU0MzcwMjQ4NzA3MA.G5_tiK.cy2-M04mg1ic9k1Qb_mcbWyNYXDsZPbmbTVw5Y")
+# Fetch the token from the environment variable
+token = os.getenv("DISCORD_TOKEN")
+
+# Run the bot with the token from the environment variable
+bot.run(token)
