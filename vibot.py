@@ -19,6 +19,8 @@ async def on_message(message):
     # Check if the message contains the desired phrases
     if "i love you leone" in message.content.lower() or "i love you" in message.content.lower():
         await message.channel.send(f"Thank you {message.author.mention} :heart: love you too baby:heart:")
+    elif "mat" in message.content.lower():
+        await message.channel.send("uhh about mat, i kidnapped him and put him in my backpack, just to make sure via is mine:heart:")
 
     # Allow commands to process after this event handler
     await bot.process_commands(message)
