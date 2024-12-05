@@ -10,6 +10,10 @@ bot = commands.Bot(command_prefix="!leobot ", intents=intents)
 async def via(ctx):
     await ctx.send("VIA IS MINE!!:heart:")
 
+@bot.command(name="credits")
+async def credits(ctx):
+    await ctx.send("credits to coder of the bot, owner id: 1184539864360816772")
+
 @bot.command(name="jakov")
 async def jakov(ctx):
     await ctx.send("jakov the joker lice :heart: (gutbitnika)")
@@ -25,6 +29,8 @@ async def on_message(message):
         await message.channel.send(f"Thank you {message.author.mention} :heart: love you too baby:heart:")
     elif "mat" in message.content.lower():
         await message.channel.send("uhh about mat, i kidnapped him and put him in my backpack, just to make sure via is mine:heart:")
+    elif "keep leone" in message.content.lower():
+        await message.channel.send("SERIOUSLY?! WE'RE OVER VIA!")
 
     # Allow commands to process after this event handler
     await bot.process_commands(message)
