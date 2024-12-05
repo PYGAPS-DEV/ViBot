@@ -8,7 +8,7 @@ bot = commands.Bot(command_prefix="!leobot ", intents=intents)
 
 @bot.command(name="via")
 async def via(ctx):
-    await ctx.send("VIA IS MINE!!:heart:")
+    await ctx.send("ME AND VIA ARE OVER! STOP TALKING ABOUT HER!")
 
 @bot.command(name="credits")
 async def credits(ctx):
@@ -16,8 +16,8 @@ async def credits(ctx):
 
 @bot.command(name="jakov")
 async def jakov(ctx):
-    await ctx.send("jakov the joker lice :heart: (gutbitnika)")
-    
+    await ctx.send("jakov my baby boy:heart::heart: (volim te jakov)")
+
 @bot.event
 async def on_message(message):
     # Prevent the bot from responding to its own messages
@@ -25,10 +25,13 @@ async def on_message(message):
         return
 
     # Check if the message contains the desired phrases
-    if "i love you leone" in message.content.lower() or "i love you" in message.content.lower():
-        await message.channel.send(f"Thank you {message.author.mention} :heart: love you too baby:heart:")
+    if "i love you" in message.content.lower():
+        if message.author.name.lower() == "vioxla":
+            await message.channel.send("NO!:broken_heart: WE'RE OVER")
+        else:
+            await message.channel.send(f"Thank you {message.author.mention} :heart: love you too baby:heart:")
     elif "mat" in message.content.lower():
-        await message.channel.send("uhh about mat, i kidnapped him and put him in my backpack, just to make sure via is mine:heart:")
+        await message.channel.send("uhh about mat, I kidnapped him and put him in my backpack, just to make sure via is mine:heart:")
     elif "keep leone" in message.content.lower():
         await message.channel.send("SERIOUSLY?! WE'RE OVER VIA!")
 
@@ -38,10 +41,10 @@ async def on_message(message):
 @bot.command(name="i love you")
 async def loveyoutoo(ctx):
     await ctx.send("thank you :heart: love you too")
-    
+
 @bot.command(name="mat")
 async def mat(ctx):
-    await ctx.send("actually sorry mat i can pay you some money and i take her all for myself:fire::heart:")
+    await ctx.send("actually sorry mat I can pay you some money and I take her all for myself:fire::heart:")
 
 # Fetch the token from the environment variable
 token = os.getenv("DISCORD_TOKEN")
