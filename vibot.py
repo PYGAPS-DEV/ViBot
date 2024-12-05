@@ -12,7 +12,7 @@ async def via(ctx):
 
 @bot.command(name="jakov")
 async def jakov(ctx):
-    await ctx.send("jakov the joker lice :smiling_imp: (gutbitnika ***i dont know what that is***)")
+    await ctx.send("jakov the joker lice :heart: (gutbitnika)")
     
 @bot.event
 async def on_message(message):
