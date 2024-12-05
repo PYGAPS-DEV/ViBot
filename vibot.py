@@ -31,7 +31,7 @@ async def loveyoutoo(ctx):
     
 @bot.command(name="mat")
 async def mat(ctx):
-    await ctx.send("yo sorry mat but we gotta share her or yk i can pay you some money and i take her all for myself:fire::heart:")
+    await ctx.send("actually sorry mat i can pay you some money and i take her all for myself:fire::heart:")
 
 # Fetch the token from the environment variable
 token = os.getenv("DISCORD_TOKEN")
