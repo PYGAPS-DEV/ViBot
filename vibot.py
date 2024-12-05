@@ -10,6 +10,10 @@ bot = commands.Bot(command_prefix="!leobot ", intents=intents)
 async def via(ctx):
     await ctx.send("VIA IS MINE!!:heart:")
 
+@bot.command(name="jakov")
+async def jakov(ctx):
+    await ctx.send("jakov the joker lice :smiling_imp: (gutbitnika ***i dont know what that is***)")
+    
 @bot.event
 async def on_message(message):
     # Prevent the bot from responding to its own messages
