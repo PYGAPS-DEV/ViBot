@@ -31,7 +31,7 @@ async def on_message(message):
         else:
             await message.channel.send(f"Thank you {message.author.mention} :heart: love you too as a friend!:heart:")
     elif "mat" in message.content.lower():
-        await message.channel.send("whos that guy?!:bangbang::interrobang:")
+        await message.channel.send("disrespect:smiling_face_with_3_hearts:")
     elif "keep leone" in message.content.lower():
         await message.channel.send("awh man!")
 
