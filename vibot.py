@@ -8,7 +8,7 @@ bot = commands.Bot(command_prefix="!leobot ", intents=intents)
 
 @bot.command(name="via")
 async def via(ctx):
-    await ctx.send("ME AND VIA ARE OVER! STOP TALKING ABOUT HER!")
+    await ctx.send("via my baby girl")
 
 @bot.command(name="credits")
 async def credits(ctx):
@@ -16,7 +16,7 @@ async def credits(ctx):
 
 @bot.command(name="jakov")
 async def jakov(ctx):
-    await ctx.send("jakov my baby boy:heart::heart: (volim te jakov)")
+    await ctx.send("jakov my ex:rage:")
 
 @bot.event
 async def on_message(message):
@@ -27,13 +27,13 @@ async def on_message(message):
     # Check if the message contains the desired phrases
     if "i love you" in message.content.lower():
         if message.author.name.lower() == "vioxla":
-            await message.channel.send("NO!:broken_heart: WE'RE OVER")
+            await message.channel.send("omg tysm babe i love you so much :heart:")
         else:
-            await message.channel.send(f"Thank you {message.author.mention} :heart: love you too baby:heart:")
+            await message.channel.send(f"Thank you {message.author.mention} :heart: love you too as a friend!:heart:")
     elif "mat" in message.content.lower():
-        await message.channel.send("uhh about mat, I kidnapped him and put him in my backpa- actually nevermind, jakov is mine:heart:")
+        await message.channel.send("I HATE MAT HES MY GIRLFRIEND'S EX:broken_heart:")
     elif "keep leone" in message.content.lower():
-        await message.channel.send("SERIOUSLY?! WE'RE OVER VIA!")
+        await message.channel.send("awh man!")
 
     # Allow commands to process after this event handler
     await bot.process_commands(message)
@@ -44,7 +44,7 @@ async def loveyoutoo(ctx):
 
 @bot.command(name="mat")
 async def mat(ctx):
-    await ctx.send("actually sorry mat I can pay you some money and I take her all for myself:fire::heart:")
+    await ctx.send("actually sorry mat I can pay you some money and I take via all for myself:fire::heart:")
 
 # Fetch the token from the environment variable
 token = os.getenv("DISCORD_TOKEN")
