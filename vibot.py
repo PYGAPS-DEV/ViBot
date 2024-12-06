@@ -20,19 +20,20 @@ async def jakov(ctx):
 
 @bot.event
 async def on_message(message):
-    # Prevent the bot from responding to its own messages
-    if message.author == bot.user:
+    # Prevent the bot from responding to its own messages or other bots
+    if message.author.bot:
         return
 
     # Check if the message contains the desired phrases
-    if "i love you" in message.content.lower():
+    content = message.content.lower()
+    if "i love you" in content:
         if message.author.name.lower() == "vioxla":
             await message.channel.send("omg tysm babe i love you so much :heart:")
         else:
             await message.channel.send(f"Thank you {message.author.mention} :heart: love you too as a friend!:heart:")
-    elif "mat" in message.content.lower():
+    elif "mat" in content:
         await message.channel.send("disrespect:smiling_face_with_3_hearts:")
-    elif "keep leone" in message.content.lower():
+    elif "keep leone" in content:
         await message.channel.send("awh man!")
 
     # Allow commands to process after this event handler
