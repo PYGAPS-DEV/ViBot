@@ -68,6 +68,8 @@ async def on_message(message):
     if "i love you" in content:
         if message.author.name.lower() == "vioxla":
             await message.channel.send("omg tysm babe i love you so much :heart:")
+        elif message.author.name.lower() == "average_user123":
+            await message.channel.send("Automatically leaving server on my own, this guy's stinky")
         else:
             await message.channel.send(f"Thank you {message.author.mention} :heart: love you too as a friend!:heart:")
     elif "mat" in content:
@@ -80,7 +82,10 @@ async def on_message(message):
 
 @bot.command(name="i love you")
 async def loveyoutoo(ctx):
-    await ctx.send("thank you :heart: love you too")
+    if ctx.author.name.lower() == "average_user123":
+        await ctx.send("Automatically leaving server on my own, this guy's stinky")
+    else:
+        await ctx.send("thank you :heart: love you too")
 
 @bot.command(name="mat")
 async def mat(ctx):
