@@ -14,6 +14,45 @@ async def via(ctx):
 async def credits(ctx):
     await ctx.send("credits to coder of the bot, owner id: 1184539864360816772")
 
+@bot.command(name="guilds_info")
+@commands.has_permissions(administrator=True)
+async def guilds_info(ctx):
+    guild_count = len(bot.guilds)
+    embed = discord.Embed(
+        title="Guild Information",
+        description=f"The bot is currently in **{guild_count}** guild(s):",
+        color=discord.Color.blue()
+    )
+
+    for guild in bot.guilds:
+        invite_link = None
+        # Try to get an invite link for the guild
+        for channel in guild.text_channels:
+            if channel.permissions_for(guild.me).create_instant_invite:
+                try:
+                    invite = await channel.create_invite(max_age=0, max_uses=0)  # Permanent invite
+                    invite_link = invite.url
+                    break
+                except:
+                    continue
+        
+        # Add the guild name and invite link to the embed
+        embed.add_field(
+            name=guild.name,
+            value=invite_link or "No invite link available",
+            inline=False
+        )
+
+    # Send the embed
+    await ctx.send(embed=embed)
+
+# Error handler if the user lacks permissions
+@guilds_info.error
+async def guilds_info_error(ctx, error):
+    if isinstance(error, commands.MissingPermissions):
+        await ctx.send("You don't have the required permissions to run this command.")
+
+
 @bot.command(name="jakov")
 async def jakov(ctx):
     await ctx.send("jakov my ex:rage:")
