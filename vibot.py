@@ -8,7 +8,7 @@ bot = commands.Bot(command_prefix="!leobot ", intents=intents)
 
 @bot.command(name="via")
 async def via(ctx):
-    await ctx.send("via my baby girl")
+    await ctx.send("via my baby girl :heart:")
 
 @bot.command(name="credits")
 async def credits(ctx):
