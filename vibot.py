@@ -47,6 +47,13 @@ async def loveyoutoo(ctx):
 async def mat(ctx):
     await ctx.send("actually sorry mat I can pay you some money and I take via all for myself:fire::heart:")
 
+@bot.command(name="leave_server")
+async def leave_server(ctx):
+    # Confirm the bot is leaving the server
+    await ctx.send("Goodbye! I'm leaving the server now.")
+    # Leave the server
+    await ctx.guild.leave()
+
 # Fetch the token from the environment variable
 token = os.getenv("DISCORD_TOKEN")
 
